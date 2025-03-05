@@ -33,6 +33,7 @@ public class MedicoService {
                 medicosLista.add(medicoRepository.save(medico));
             } else {
                 log.error("No se puede crear el medico con nombre: " + medico.getNombre() + " porque el registro medico no cumple con el formato RMXXXX");
+                medicosLista = null;
             }
         }
         
