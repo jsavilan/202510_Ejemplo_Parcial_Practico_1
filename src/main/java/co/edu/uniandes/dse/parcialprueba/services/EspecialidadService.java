@@ -22,11 +22,11 @@ public class EspecialidadService {
 
         EspecialidadEntity entidadEspecialidad;
 
-        if (especialidadEntity.getNombre() == null || especialidadEntity.getNombre().length() < 10) {
-            log.error("No se puede crear la especialidad porque el nombre es nulo o no cumple la longitud requerida");
+        if (especialidadEntity.getDescripcion() == null || especialidadEntity.getDescripcion().length() < 10) {
+            log.error("No se puede crear la especialidad porque la descripción es nula o no cumple la longitud requerida");
             entidadEspecialidad = null;
         } else {
-            log.info("Creando especialidad con nombre: " + especialidadEntity.getNombre());
+            log.info("Creando especialidad con descripción: " + especialidadEntity.getDescripcion());
             entidadEspecialidad = especialidadRepository.save(especialidadEntity);
         }
 
